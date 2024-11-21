@@ -39,7 +39,6 @@ class ProductController {
             const data = req.body;
             const id = parseInt(req.params.id);
             const product = await Product.updateProduct(data, id);
-            console.log(product);
             if (!product) {
                 res.status(404).json({message: 'Product not found!'});
             } else {
